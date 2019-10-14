@@ -14,7 +14,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" /><title>Tutorial - OMS and State Machines - Spryker Commerce OS | Spryker</title>
         <!-- Google Tag Manager -->
-        <script>/* <![CDATA[ */(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        <script>/* <![CDATA[ */(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtDm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 			j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
 			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -497,11 +497,12 @@ protected function extendConditionPlugins(Container $container): Container
                                                         <div class="MCDropDownBody dropDownBody">
                                                             <p>The final step is to use the state machine by hooking it into the checkout.</p>
                                                             <p>To do so, open the configuration file <code>config/Shared/config_default.php</code> and make the invoice payment method use the <i>Demo01</i> process.
-				<pre><code>
-$config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
-	DummyPaymentConfig::PAYMENT_METHOD_INVOICE =&gt; 'Demo01',
-];							
-				</code></pre></p>
+				<div class="code-toolbar"><pre class=" language-php line-numbers"><code class=" language-php">
+<span class="token variable">$config</span><span class="token punctuation">[</span><span class="token scope">SalesConstants<span class="token punctuation">::</span></span><span class="token constant">PAYMENT_METHOD_STATEMACHINE_MAPPING</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+	<span class="token scope">DummyPaymentConfig<span class="token punctuation">::</span></span><span class="token constant">PAYMENT_METHOD_INVOICE</span><span class="token punctuation">]</span> <span class="token operator"> =</span><span class="token single-quoted-string string"> 'Demo01'</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+					<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span>
+</span></code></pre></div></p>
                                                             <p>That's it! Your process should be working now.</p>
                                                         </div>
                                                     </div>
